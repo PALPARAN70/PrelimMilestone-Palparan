@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palparan — Prelim Milestone Project</title>
+    <meta
+      name="description"
+      content="Portfolio site for the Prelim Milestone Project — home, about, and a live GitHub project gallery."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="visually-hidden" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html"
+          >Palparan<span class="dot">.</span></a
+        >
+
+        <button
+          type="button"
+          id="navToggle"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="navMenu"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <div class="container">
+        <section class="hero" aria-labelledby="hero-heading">
+          <div class="hero-content">
+            <p>Prelim Milestone Project</p>
+            <h1 id="hero-heading">
+              Hi, I'm <span class="accent">Luis Alejandro M. Palparan</span> — I
+              build things for the web.
+            </h1>
+            <p class="lede">
+              BS Computer Science student at Ateneo de Davao University. This
+              site is my Weeks 1–4 milestone: semantic HTML, responsive CSS, DOM
+              interactivity, and a live GitHub-powered project gallery.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="projects.html"
+                >View my projects</a
+              >
+              <a class="btn btn-secondary" href="about.html">About me</a>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <img
+              class="hero-photo"
+              src="518388540_24222838330709092_5278811844832601329_n.jpg"
+              alt="Photo of Palparan"
+              width="480"
+              height="480"
+            />
+          </div>
+        </section>
+
+        <section class="highlights" aria-label="What this project covers">
+          <article class="highlight-card">
+            <h2>Semantic &amp; accessible</h2>
+            <p>
+              Landmark elements, labelled form fields, and alt text on every
+              image — built to be readable by people and screen readers alike.
+            </p>
+          </article>
+          <article class="highlight-card">
+            <h2>Responsive by default</h2>
+            <p>
+              Mobile-first layout with CSS Grid for the gallery and Flexbox for
+              navigation, adapting across three breakpoints.
+            </p>
+          </article>
+          <article class="highlight-card">
+            <h2>Live GitHub data</h2>
+            <p>
+              The Projects page fetches my repositories straight from the GitHub
+              REST API, with real loading and error states.
+            </p>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; 2026 Palparan. Prelim Milestone Project.</p>
+        <ul class="social-links">
+          <li>
+            <a
+              href="https://github.com/PALPARAN70"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

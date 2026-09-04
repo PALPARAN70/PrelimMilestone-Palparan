@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects — Palparan</title>
+    <meta
+      name="description"
+      content="A live gallery of Palparan's public GitHub repositories, searchable by name."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="visually-hidden" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html"
+          >Palparan<span class="dot">.</span></a
+        >
+
+        <button
+          type="button"
+          id="navToggle"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="navMenu"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <div class="container">
+        <section class="gallery-intro" aria-labelledby="projects-heading">
+          <h1 id="projects-heading">Projects</h1>
+          <p class="lede">Pulled live from my GitHub account</p>
+
+          <form class="search-bar" role="search" onsubmit="return false;">
+            <label for="project-search">Search projects</label>
+            <input
+              type="search"
+              id="project-search"
+              placeholder="Enter repository name"
+              autocomplete="off"
+            />
+
+            <label class="bookmark-filter" for="bookmark-filter">
+              <input type="checkbox" id="bookmark-filter" />
+              Show bookmarked only
+            </label>
+          </form>
+        </section>
+
+        <section class="gallery-section" aria-label="Project gallery">
+          <p class="gallery-meta" id="gallery-meta" aria-live="polite"></p>
+
+          <div class="spinner-wrap" id="spinner-wrap" role="status">
+            <span class="spinner" aria-hidden="true"></span>
+            <span>Loading projects…</span>
+          </div>
+
+          <div class="gallery" id="gallery" aria-live="polite"></div>
+
+          <nav
+            class="pagination"
+            id="pagination"
+            aria-label="Project gallery pages"
+          ></nav>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; 2026 Palparan. Prelim Milestone Project.</p>
+        <ul class="social-links">
+          <li>
+            <a
+              href="https://github.com/PALPARAN70"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="projects.js"></script>
+  </body>
+</html>
